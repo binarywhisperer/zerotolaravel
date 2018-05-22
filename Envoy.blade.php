@@ -62,7 +62,7 @@ cat ~/.ssh/id_rsa.pub
     usermod -aG sudo zerotolaravel
 @endtask
 
-@task('deploy', ['on' => ['production']])
+@task('pull', ['on' => ['production']])
     cd /var/www/{{$gitDir}}
     git pull
     git status
